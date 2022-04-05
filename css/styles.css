@@ -16,6 +16,7 @@ html {
   --color_h: #212121;
   --background_hero: #2f303a;
   --portfolio_filter_bc: #f5f4fa;
+  --background_team: #f5f4fa;
 }
 body {
   background-color: var(--primary_color);
@@ -38,7 +39,39 @@ a {
 li {
   list-style-type: none;
 }
+.list {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.studio_titles {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.studio_title {
+  margin: 0;
+}
+
 /*header*/
+.header_box {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.header_link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .logo {
   font-family: 'Raleway', 'san-serif';
   font-weight: bold;
@@ -49,8 +82,19 @@ li {
 .web_logo {
   color: var(--accent);
 }
+.header_nav {
+  margin-left: 90px;
+}
+.header_nav_list:nth-child(n + 2),
+.contact_list:nth-child(n + 2) {
+  margin-left: 50px;
+}
+.header_contact {
+  margin-left: auto;
+}
 .header_nav,
 .header_contact {
+  display: flex;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -72,11 +116,17 @@ li {
   border: none;
 }
 
-/*main sudio*/
+/*main studio*/
 
 /*hero*/
 .hero {
   background-color: var(--background_hero);
+}
+.hero_box {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 200px 250px;
+  text-align: center;
 }
 .hero_title {
   font-weight: 900;
@@ -86,23 +136,42 @@ li {
   text-transform: uppercase;
   color: var(--primary_color);
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
 }
 .hero_button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: block;
+  display: inline-block;
   color: var(--primary_color);
   background-color: var(--accent);
   border: none;
-  margin: 0 auto;
+  border-radius: 4px;
   cursor: pointer;
+  padding: 10px 32px;
 }
 .hero_button:focus {
   border: none;
+  border-radius: 4px;
 }
 
 /*benefits*/
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 90px;
+}
+.benefits_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefit {
+  flex-basis: calc((100% - 90px) / 4);
+}
+.benefit:not(:first-child) {
+  margin-left: 30px;
+}
 .benefit_title {
   font-weight: bold;
   line-height: 1.1;
@@ -117,27 +186,67 @@ li {
 }
 
 /*work*/
+.work {
+  padding-bottom: 98px;
+}
 .work_title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.2;
+  margin-bottom: 60px;
+}
+.work_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work_item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.work_item:not(:first-child) {
+  margin-left: 30px;
 }
 
 /*team*/
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--background_team);
+}
 .team_title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.2;
+  margin-bottom: 60px;
+}
+.team_img {
+  margin-bottom: 30px;
+}
+.team_img > img {
+  display: block;
+  max-width: 100%;
+}
+.team_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team_hero {
+  background-color: var(--primary_color);
+  flex-basis: calc((100% - 90px) / 4);
+  padding-bottom: 35px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team_hero:not(:first-child) {
+  margin-left: 30px;
 }
 .team_hero_title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .team_hero_discription {
   font-size: 16px;
   line-height: 1.2;
   color: var(--color_contact);
+  text-align: center;
+  margin: 0;
 }
 
 /*partfolio*/
@@ -152,6 +261,7 @@ li {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--portfolio_filter_bc);
   cursor: pointer;
+  padding: 6px 22px;
 }
 .button_filter:hover,
 .button_filter:focus {
@@ -173,16 +283,28 @@ li {
 }
 
 /*footer*/
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 footer {
   background-color: var(--background_hero);
 }
-footer .logo {
+.footer_logo {
+  display: inline-block;
   color: var(--primary_color);
+  margin-bottom: 20px;
+}
+.footer_contact_list:not(:first-child) {
+  margin-top: 10px;
 }
 .footer_contact .contact_city {
   font-style: normal;
   line-height: 1.7;
   color: var(--primary_color);
+}
+.city {
+  margin: 0;
 }
 .footer_contact .mail a,
 .footer_contact .tel a {
