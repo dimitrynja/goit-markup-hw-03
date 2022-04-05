@@ -17,6 +17,7 @@ html {
   --background_hero: #2f303a;
   --portfolio_filter_bc: #f5f4fa;
   --background_team: #f5f4fa;
+  --border_header: #e5e5e5;
 }
 body {
   background-color: var(--primary_color);
@@ -250,6 +251,35 @@ li {
 }
 
 /*partfolio*/
+.portfolio_header {
+  border-bottom: 2px solid var(--border_header);
+}
+.portfolio_nav {
+  padding-top: 95px;
+  padding-bottom: 50px;
+}
+.portfolio_img > img {
+  display: block;
+  max-width: 100%;
+}
+.discription_box {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.filters {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.filter:not(:last-child) {
+  margin-right: 8px;
+}
 .button_filter {
   font-weight: 500;
   font-size: 16px;
@@ -270,16 +300,44 @@ li {
   color: #fff;
   border: none;
 }
+.project {
+  padding-bottom: 90px;
+}
+.project_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.project_list_item:nth-child(-n + 3) {
+  margin-top: 0;
+}
+.project_list_item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+.project_list_item {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .project_name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .description_project {
   font-size: 16px;
   line-height: 1.9;
   color: var(--color_contact);
+  margin: 0;
 }
 
 /*footer*/
