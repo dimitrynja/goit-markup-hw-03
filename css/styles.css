@@ -85,8 +85,8 @@ img {
   align-items: center;
 }
 .header_link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo {
   font-family: 'Raleway', 'san-serif';
@@ -94,8 +94,6 @@ img {
   font-size: 26px;
   line-height: 1.2;
   color: var(--color_nav);
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .web_logo {
   color: var(--accent);
@@ -341,16 +339,14 @@ img {
 
 /*footer*/
 .footer {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background_hero);
 }
 .logo.footer_logo {
   display: inline-block;
   color: var(--primary_color);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0;
+  margin-bottom: 20px;
 }
 .footer_contact_list:not(:first-child) {
   margin-top: 10px;
